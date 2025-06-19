@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jainam Doshi | CA & Actuarial Professional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* gray-50 */
+            color: #374151; /* gray-700 */
+            /* Prevent body scrolling if content fits on one screen */
+            overflow: hidden;
+            height: 100vh; /* Set body height for overall page fit */
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Main container to manage overall layout and prevent internal scroll */
+        main {
+            flex-grow: 1; /* Allow main to take up available vertical space */
+            overflow-y: auto; /* Allow scrolling within main if content overflows, but aim to prevent it */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            padding: 1rem 0.5rem; /* Decreased overall padding for mobile */
+            display: grid;
+            grid-template-columns: 1fr; /* Single column by default for mobile */
+            gap: 1rem; /* Decreased gap between sections */
+        }
+
+        @media (min-width: 1024px) { /* On large screens (lg) and up */
+            main {
+                grid-template-columns: 1fr 1fr; /* Two columns */
+                gap: 1.5rem; /* Wider gap for desktop, also decreased */
+                max-width: 76rem; /* Max width similar to A4 landscape, adjust as needed */
+                margin: 0 auto; /* Center the content */
+                padding: 1rem 1rem; /* Adjusted padding for wider layout, also decreased */
+            }
+            #summary {
+                grid-column: span 2; /* Summary spans both columns */
+            }
+        }
+
+        /* Styles for the container holding Education and Certifications */
+        #education-certifications-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Education (2fr) will be wider than Certifications (1fr) */
+            gap: 1rem; /* Default gap for smaller screens, decreased */
+        }
+
+        @media (min-width: 1024px) {
+            #education-certifications-container {
+                grid-column: span 2; /* Make this container span both columns on larger screens */
+                gap: 1.5rem; /* Wider gap for desktop, also decreased */
+            }
+        }
+
+        /* New container for Skills and Interests */
+        #skills-interests-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Always two columns inside for skills and interests */
+            gap: 1rem; /* Default gap for smaller screens, decreased */
+        }
+
+        @media (min-width: 1024px) {
+            #skills-interests-container {
+                grid-column: span 2; /* Make this container span both columns on larger screens */
+                gap: 1.5rem; /* Wider gap for desktop, also decreased */
+            }
+        }
+
+
+        /* Sections are now just logical divisions, with minimal padding */
+        section {
+            padding: 0.5rem; /* Minimal padding within sections */
+            width: 100%; /* Ensure sections take full width of their grid column */
+            display: flex;
+            flex-direction: column; /* Stack content within sections */
+            align-items: flex-start;
+        }
+
+        /* Skill tags retain some styling, but not a full card */
+        .skill-tag {
+            background-color: #e2e8f0; /* Light gray background for tags */
+            color: #4b5563; /* Darker text for tags */
+            font-size: 0.7rem; /* Smaller font for tags */
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px; /* Full rounded */
+            font-weight: 500;
+        }
+        /* No hover effect for skills to maintain static feel */
+        .skill-tag.bg-blue-100 { background-color: #dbeafe; color: #1e40af; }
+        .skill-tag.bg-green-100 { background-color: #d1fae5; color: #065f46; }
+        .skill-tag.bg-yellow-100 { background-color: #fef3c7; color: #b45309; }
+
+        /* General heading styles for sections */
+        .section-heading {
+            font-size: 1.25rem; /* Adjusted from text-2xl to text-xl */
+            font-weight: 700; /* font-bold */
+            color: #1f2937; /* gray-900 */
+            margin-bottom: 0.5rem; /* Decreased margin-bottom */
+            text-align: center;
+            width: 100%;
+        }
+
+        /* Specific adjustments for resume content */
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #4b5563; /* gray-600 */
+            font-size: 0.875rem; /* text-sm */
+        }
+        .info-item svg {
+            width: 1rem; /* Smaller icons */
+            height: 1rem;
+            stroke-width: 1.5; /* Thinner stroke */
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <section id="summary">
+            <div class="w-full">
+                <div class="flex flex-col md:flex-row items-center gap-5 pb-4 border-b border-gray-200 mb-4">
+                    <div class="flex-shrink-0">
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-gray-800">Jainam Doshi</h2>
+                        <p class="text-lg text-blue-600 font-semibold mt-0.5">CA & Actuarial Student | Surat</p>
+                        <p class="mt-2 text-gray-700 leading-relaxed text-sm">
+                            I'm on a unique journey, blending the financial precision of Chartered Accountancy with the predictive, analytical power of Actuarial Science. This dual path gives me a distinct perspective on risk and value. I am actively seeking a CA Articleship where I can apply this comprehensive skillset to tackle complex challenges in auditing and financial analysis, contributing a fresh and robust viewpoint to a forward-thinking firm.
+                        </p>
+                        <div class="mt-3 flex flex-wrap items-center space-x-3 text-xs">
+                            <a href="mailto:jainamdoshi2703@gmail.com" class="info-item text-gray-700 hover:text-blue-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>jainamdoshi2703@gmail.com</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/jainam-doshi-512551315/" target="_blank" rel="noopener noreferrer" class="info-item text-gray-700 hover:text-blue-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="education-certifications-container">
+            <section id="education">
+                <h3 class="section-heading">Education & Qualifications</h3>
+                <div class="grid md:grid-cols-2 gap-4 w-full"> 
+                    <div class="pb-3 md:pb-0 md:border-r md:border-b-0 border-b border-gray-100">
+                        <h4 class="text-base font-semibold text-blue-600 mb-1">Chartered Accountancy (CA)</h4>
+                        <p class="text-xs text-gray-600 mb-2">The Institute of Chartered Accountants of India</p>
+                        <ul class="space-y-1 border-l border-blue-400 ml-1 pl-2 text-sm">
+                            <li><strong class="font-semibold text-gray-800"> Foundation</strong><span class="block text-xs text-gray-600">Completed: Jan 2022</span></li>
+                            <li><strong class="font-semibold text-gray-800">Intermediate (Group-1)</strong><span class="block text-xs text-gray-600">Completed: May 2024</span></li>
+                            <li><strong class="font-semibold text-gray-800">Intermediate (Group-2)</strong><span class="block text-xs text-gray-600">Completed: Jan 2025</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-base font-semibold text-green-600 mb-1">Actuarial Science</h4>
+                        <ul class="space-y-1 border-l border-green-400 ml-1 pl-2 text-sm">
+                            <li><strong class="font-semibold text-gray-800">CM1 (Actuarial Mathematics)</strong><span class="block text-xs text-gray-600">Appeared</span></li>
+                            <li><strong class="font-semibold text-gray-800">CB1 (Business Finance)</strong><span class="block text-xs text-gray-600">Completed: May 2024</span></li>
+                            <li><strong class="font-semibold text-gray-800">CB2 (Business Economics)</strong><span class="block text-xs text-gray-600">Completed: Sep 2023</span></li>
+                            <li><strong class="font-semibold text-gray-800">CS1 (Actuarial Statistics)</strong><span class="block text-xs text-gray-600">Completed: May 2022</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="certifications">
+                <h3 class="section-heading">Certifications</h3>
+                <div class="w-full text-center">
+                    <ul class="space-y-2 text-left">
+                        <li class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <span class="font-medium text-sm text-gray-800">ICITSS-Orientation Course</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-blue-600 feather feather-award"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                            <span class="font-medium text-sm text-gray-800">ICITSS - Information       Technology Course</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div id="skills-interests-container">
+            <section id="skills">
+                <h3 class="section-heading">Technical Skills</h3>
+                <div class="w-full space-y-4">
+                    <div>
+                        <h4 class="font-semibold text-base text-gray-800 mb-1.5">Financial & Actuarial</h4>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag">Business Valuation</span>
+                            <span class="skill-tag">Financial Modelling</span>
+                            <span class="skill-tag">Time Series Analysis</span>
+                            <span class="skill-tag">Actuarial Modelling</span>
+                            <span class="skill-tag">Statistical Analysis</span>
+                            <span class="skill-tag">Insurance Pricing</span>
+                            <span class="skill-tag">Survival Models</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-base text-gray-800 mb-1.5">Compliance & Reporting</h4>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag bg-blue-100 text-blue-700">Accounting Standards</span>
+                            <span class="skill-tag bg-blue-100 text-blue-700">Financial Reporting</span>
+                            <span class="skill-tag bg-blue-100 text-blue-700">Standards of Auditing</span>
+                            <span class="skill-tag bg-blue-100 text-blue-700">Companies Act 2013</span>
+                            <span class="skill-tag bg-blue-100 text-blue-700">Provisions of GST Act</span>
+                            <span class="skill-tag bg-blue-100 text-blue-700">Provisions of Income Tax Act</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-base text-gray-800 mb-1.5">Tools & General</h4>
+                        <div class="flex flex-wrap gap-1.5">
+                            <span class="skill-tag bg-green-100 text-green-700">MS Excel</span>
+                            <span class="skill-tag bg-green-100 text-green-700">PowerPoint</span>
+                            <span class="skill-tag bg-green-100 text-green-700">MS Word</span>
+                            <span class="skill-tag bg-green-100 text-green-700">R</span>
+                            <span class="skill-tag bg-yellow-100 text-yellow-700">Problem-Solving</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="interests">
+                <h3 class="section-heading">Interests</h3>
+                <div class="w-full">
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-2">
+                            <div class="flex-shrink-0 w-6 h-6 bg-purple-100 text-purple-700 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trending-up"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm text-gray-800">Financial Markets & Investment</h4>
+                                <p class="text-gray-700 text-xs">Analyzing market trends and developing investment strategies.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <div class="flex-shrink-0 w-6 h-6 bg-blue-100 text-blue-700 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-book-open"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm text-gray-800">Business Biographies</h4>
+                                <p class="text-gray-700 text-xs">Reading strategy books and learning from the journeys of successful leaders.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <div class="flex-shrink-0 w-6 h-6 bg-green-100 text-green-700 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm text-gray-800">Data Analytics & Research</h4>
+                                <p class="text-gray-700 text-xs">Exploring datasets for insights and conducting actuarial research.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <div class="flex-shrink-0 w-6 h-6 bg-yellow-100 text-yellow-700 rounded-full flex items-center justify-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-headphones"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+                            </div>
+                            <div>
+                               <h4 class="font-semibold text-sm text-gray-800">Podcasts</h4>
+                               <p class="text-gray-700 text-xs">Listening to podcasts on finance, technology, and self-development.</p>
+                            </div>
+                       </li>
+                       <li class="flex items-start space-x-2">
+                            <div class="flex-shrink-0 w-6 h-6 bg-rose-100 text-rose-700 rounded-full flex items-center justify-center">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-coffee"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                            </div>
+                            <div>
+                               <h4 class="font-semibold text-sm text-gray-800">Cooking</h4>
+                               <p class="text-gray-700 text-xs">Engaging in cooking as a creative and mindful activity.</p>
+                            </div>
+                       </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <script>
+        // Removed fade-in animation as it's no longer necessary for a single-page view
+        // The DOMContentLoaded listener is still good practice if other scripts were to be added.
+        document.addEventListener('DOMContentLoaded', function() {
+            // No JavaScript specific to fade-in or mobile menu needed for this static layout.
+        });
+    </script>
+</body>
+</html>
